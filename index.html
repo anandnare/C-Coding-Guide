@@ -34,228 +34,41 @@
         <h2 class="section-title">Coding Questions & Answers</h2>
         
         <div class="chapter-card">
-            <h3 class="chapter-title">Chapter 1: Basic Mathematical & Decision Making Programs</h3>
+            <h3 class="chapter-title">Loop Control & Array Operations</h3>
             
             <div class="qa-item">
                 <button class="qa-question">
-                    <span>Q1. Write a program in C for the addition of two numbers.</span>
+                    <span>Q1. Write a C program to check if a number is prime or not using the break statement.</span>
                     <i class="fa-solid fa-chevron-down"></i>
                 </button>
                 <div class="qa-answer">
-                    <p><strong>Approach:</strong> Declare variables, take two integer inputs from the user using <code>scanf()</code>, add them, and print the output balance.</p>
+                    <p><strong>Approach:</strong> Loop from 2 up to <code>num / 2</code>. If a factor is found, flag the number as composite and use the <code>break</code> statement to immediately terminate the loop early, preventing unnecessary calculations.</p>
                     <div class="code-container">
 <pre><code>#include &lt;stdio.h&gt;
 #include &lt;conio.h&gt;
 
 void main() {
-    int num1, num2, sum;
+    int num, i, isPrime = 1;
     clrscr();
 
-    printf("Enter two integers: ");
-    scanf("%d %d", &amp;num1, &amp;num2);
-
-    sum = num1 + num2;
-
-    printf("Sum = %d\n", sum);
-
-    getch();
-}</code></pre>
-                    </div>
-                </div>
-            </div>
-
-            <div class="qa-item">
-                <button class="qa-question">
-                    <span>Q2. Write a C program to calculate the area of a rectangle.</span>
-                    <i class="fa-solid fa-chevron-down"></i>
-                </button>
-                <div class="qa-answer">
-                    <p><strong>Approach:</strong> Use the dimensional equation <code>Area = length * width</code>. Uses float values to process arbitrary decimal numbers.</p>
-                    <div class="code-container">
-<pre><code>#include &lt;stdio.h&gt;
-#include &lt;conio.h&gt;
-
-void main() {
-    float length, width, area;
-    clrscr();
-
-    printf("Enter length and width of rectangle: ");
-    scanf("%f %f", &amp;length, &amp;width);
-
-    area = length * width;
-
-    printf("Area of Rectangle = %.2f\n", area);
-
-    getch();
-}</code></pre>
-                    </div>
-                </div>
-            </div>
-
-            <div class="qa-item">
-                <button class="qa-question">
-                    <span>Q3. Write a C program to calculate the area of a circle.</span>
-                    <i class="fa-solid fa-chevron-down"></i>
-                </button>
-                <div class="qa-answer">
-                    <p><strong>Approach:</strong> Implement geometric multiplier math: <code>Area = 3.14159 * radius * radius</code>.</p>
-                    <div class="code-container">
-<pre><code>#include &lt;stdio.h&gt;
-#include &lt;conio.h&gt;
-
-void main() {
-    float radius, area;
-    clrscr();
-
-    printf("Enter the radius of the circle: ");
-    scanf("%f", &amp;radius);
-
-    area = 3.14159 * radius * radius;
-
-    printf("Area of Circle = %.2f\n", area);
-
-    getch();
-}</code></pre>
-                    </div>
-                </div>
-            </div>
-
-            <div class="qa-item">
-                <button class="qa-question">
-                    <span>Q4. Write a C program to convert given temperature from Celsius to Fahrenheit.</span>
-                    <i class="fa-solid fa-chevron-down"></i>
-                </button>
-                <div class="qa-answer">
-                    <p><strong>Approach:</strong> Apply the standard conversion equation formula directly inside your evaluation block: <code>Fahrenheit = (Celsius * 9/5) + 32</code>.</p>
-                    <div class="code-container">
-<pre><code>#include &lt;stdio.h&gt;
-#include &lt;conio.h&gt;
-
-void main() {
-    float celsius, fahrenheit;
-    clrscr();
-
-    printf("Enter temperature in Celsius: ");
-    scanf("%f", &amp;celsius);
-
-    fahrenheit = (celsius * 9 / 5) + 32;
-
-    printf("Temperature in Fahrenheit = %.2f\n", fahrenheit);
-
-    getch();
-}</code></pre>
-                    </div>
-                </div>
-            </div>
-
-            <div class="qa-item">
-                <button class="qa-question">
-                    <span>Q5. Write a program to convert temperature from Fahrenheit to Celsius.</span>
-                    <i class="fa-solid fa-chevron-down"></i>
-                </button>
-                <div class="qa-answer">
-                    <p><strong>Approach:</strong> Reverse standard algebraic evaluation logic values using: <code>Celsius = (Fahrenheit - 32) * 5/9</code>.</p>
-                    <div class="code-container">
-<pre><code>#include &lt;stdio.h&gt;
-#include &lt;conio.h&gt;
-
-void main() {
-    float fahrenheit, celsius;
-    clrscr();
-
-    printf("Enter temperature in Fahrenheit: ");
-    scanf("%f", &amp;fahrenheit);
-
-    celsius = (fahrenheit - 32) * 5 / 9;
-
-    printf("Temperature in Celsius = %.2f\n", celsius);
-
-    getch();
-}</code></pre>
-                    </div>
-                </div>
-            </div>
-
-            <div class="qa-item">
-                <button class="qa-question">
-                    <span>Q6. Write a C program to calculate the area of a square.</span>
-                    <i class="fa-solid fa-chevron-down"></i>
-                </button>
-                <div class="qa-answer">
-                    <p><strong>Approach:</strong> Obtain a side dimensional measurement block input parameter and run exponential multiplying layout: <code>Area = side * side</code>.</p>
-                    <div class="code-container">
-<pre><code>#include &lt;stdio.h&gt;
-#include &lt;conio.h&gt;
-
-void main() {
-    float side, area;
-    clrscr();
-
-    printf("Enter the side length of the square: ");
-    scanf("%f", &amp;side);
-
-    area = side * side;
-
-    printf("Area of Square = %.2f\n", area);
-
-    getch();
-}</code></pre>
-                    </div>
-                </div>
-            </div>
-
-            <div class="qa-item">
-                <button class="qa-question">
-                    <span>Q7. Write a C program to calculate if a given number is divisible by 5.</span>
-                    <i class="fa-solid fa-chevron-down"></i>
-                </button>
-                <div class="qa-answer">
-                    <p><strong>Approach:</strong> Use the modulo operator (<code>%</code>) to confirm if dividing target elements leaves a zero remainder balance (<code>num % 5 == 0</code>).</p>
-                    <div class="code-container">
-<pre><code>#include &lt;stdio.h&gt;
-#include &lt;conio.h&gt;
-
-void main() {
-    int num;
-    clrscr();
-
-    printf("Enter an integer: ");
+    printf("Enter a positive integer: ");
     scanf("%d", &amp;num);
 
-    if (num % 5 == 0) {
-        printf("%d is divisible by 5\n", num);
+    if (num &lt;= 1) {
+        isPrime = 0;
     } else {
-        printf("%d is not divisible by 5\n", num);
+        for (i = 2; i &lt;= num / 2; i++) {
+            if (num % i == 0) {
+                isPrime = 0; /* Number is divisible, not prime */
+                break;       /* Exit loop immediately */
+            }
+        }
     }
 
-    getch();
-}</code></pre>
-                    </div>
-                </div>
-            </div>
-
-            <div class="qa-item">
-                <button class="qa-question">
-                    <span>Q8. Write a C program to check if a given number is odd or even.</span>
-                    <i class="fa-solid fa-chevron-down"></i>
-                </button>
-                <div class="qa-answer">
-                    <p><strong>Approach:</strong> If any base integer leaves a remainder of 0 when divided by 2, validate it as even; otherwise, flag it as odd.</p>
-                    <div class="code-container">
-<pre><code>#include &lt;stdio.h&gt;
-#include &lt;conio.h&gt;
-
-void main() {
-    int num;
-    clrscr();
-
-    printf("Enter an integer: ");
-    scanf("%d", &amp;num);
-
-    if (num % 2 == 0) {
-        printf("%d is Even\n", num);
+    if (isPrime == 1) {
+        printf("%d is a Prime Number.\n", num);
     } else {
-        printf("%d is Odd\n", num);
+        printf("%d is not a Prime Number.\n", num);
     }
 
     getch();
@@ -266,206 +79,11 @@ void main() {
 
             <div class="qa-item">
                 <button class="qa-question">
-                    <span>Q9. Write a C program to check if a given person is eligible for voting or not.</span>
+                    <span>Q2. Write a C program to demonstrate the use of the continue statement.</span>
                     <i class="fa-solid fa-chevron-down"></i>
                 </button>
                 <div class="qa-answer">
-                    <p><strong>Approach:</strong> Process age numerical parameters using basic relational tracking boundaries against a threshold limits constraint of 18.</p>
-                    <div class="code-container">
-<pre><code>#include &lt;stdio.h&gt;
-#include &lt;conio.h&gt;
-
-void main() {
-    int age;
-    clrscr();
-
-    printf("Enter your age: ");
-    scanf("%d", &amp;age);
-
-    if (age &gt;= 18) {
-        printf("You are eligible to vote.\n");
-    } else {
-        printf("You are not eligible to vote.\n");
-    }
-
-    getch();
-}</code></pre>
-                    </div>
-                </div>
-            </div>
-
-            <div class="qa-item">
-                <button class="qa-question">
-                    <span>Q10. Write a C program to check if a given year is a leap year or not.</span>
-                    <i class="fa-solid fa-chevron-down"></i>
-                </button>
-                <div class="qa-answer">
-                    <p><strong>Approach:</strong> Verify calendar indices using logical gates: divisible by 400, OR divisible by 4 while concurrently not divisible by 100.</p>
-                    <div class="code-container">
-<pre><code>#include &lt;stdio.h&gt;
-#include &lt;conio.h&gt;
-
-void main() {
-    int year;
-    clrscr();
-
-    printf("Enter a year: ");
-    scanf("%d", &amp;year);
-
-    if ((year % 400 == 0) || (year % 4 == 0 &amp;&amp; year % 100 != 0)) {
-        printf("%d is a Leap Year.\n", year);
-    } else {
-        printf("%d is not a Leap Year.\n", year);
-    }
-
-    getch();
-}</code></pre>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="chapter-card">
-            <h3 class="chapter-title">Chapter 2: Intermediate & Control Flow Programs</h3>
-            
-            <div class="qa-item">
-                <button class="qa-question">
-                    <span>Q11. Write a C program to check the biggest number from any two given numbers.</span>
-                    <i class="fa-solid fa-chevron-down"></i>
-                </button>
-                <div class="qa-answer">
-                    <p><strong>Approach:</strong> Compare inputs using relational operators within an conditional statement to track the maximum value.</p>
-                    <div class="code-container">
-<pre><code>#include &lt;stdio.h&gt;
-#include &lt;conio.h&gt;
-
-void main() {
-    int num1, num2;
-    clrscr();
-
-    printf("Enter two numbers: ");
-    scanf("%d %d", &amp;num1, &amp;num2);
-
-    if (num1 &gt; num2) {
-        printf("%d is the biggest number.\n", num1);
-    } else if (num2 &gt; num1) {
-        printf("%d is the biggest number.\n", num2);
-    } else {
-        printf("Both numbers are equal.\n");
-    }
-
-    getch();
-}</code></pre>
-                    </div>
-                </div>
-            </div>
-
-            <div class="qa-item">
-                <button class="qa-question">
-                    <span>Q12. Write a C program to find the grade of a student based on marks.</span>
-                    <i class="fa-solid fa-chevron-down"></i>
-                </button>
-                <div class="qa-answer">
-                    <p><strong>Approach:</strong> Evaluate a score value across multi-level logic branches to categorize custom grade assignments cleanly.</p>
-                    <div class="code-container">
-<pre><code>#include &lt;stdio.h&gt;
-#include &lt;conio.h&gt;
-
-void main() {
-    int marks;
-    clrscr();
-
-    printf("Enter student marks (0-100): ");
-    scanf("%d", &amp;marks);
-
-    if (marks &gt;= 80 &amp;&amp; marks &lt;= 100) {
-        printf("Grade: A\n");
-    } else if (marks &gt;= 60 &amp;&amp; marks &lt; 80) {
-        printf("Grade: B\n");
-    } else if (marks &gt;= 40 &amp;&amp; marks &lt; 60) {
-        printf("Grade: C\n");
-    } else if (marks &gt;= 0 &amp;&amp; marks &lt; 40) {
-        printf("Grade: Fail\n");
-    } else {
-        printf("Invalid Marks Entered!\n");
-    }
-
-    getch();
-}</code></pre>
-                    </div>
-                </div>
-            </div>
-
-            <div class="qa-item">
-                <button class="qa-question">
-                    <span>Q13. Write a C program to display the minimum number from two given numbers using a conditional operator.</span>
-                    <i class="fa-solid fa-chevron-down"></i>
-                </button>
-                <div class="qa-answer">
-                    <p><strong>Approach:</strong> Use the concise inline ternary operator construct format: <code>(condition) ? output1 : output2</code>.</p>
-                    <div class="code-container">
-<pre><code>#include &lt;stdio.h&gt;
-#include &lt;conio.h&gt;
-
-void main() {
-    int num1, num2, min;
-    clrscr();
-
-    printf("Enter two numbers: ");
-    scanf("%d %d", &amp;num1, &amp;num2);
-
-    min = (num1 &lt; num2) ? num1 : num2;
-
-    printf("The minimum number is: %d\n", min);
-
-    getch();
-}</code></pre>
-                    </div>
-                </div>
-            </div>
-
-            <div class="qa-item">
-                <button class="qa-question">
-                    <span>Q14. Write a C program to display the day of the week using a switch-case statement.</span>
-                    <i class="fa-solid fa-chevron-down"></i>
-                </button>
-                <div class="qa-answer">
-                    <p><strong>Approach:</strong> Map clean constant paths via single-integer expressions for structured switch evaluations.</p>
-                    <div class="code-container">
-<pre><code>#include &lt;stdio.h&gt;
-#include &lt;conio.h&gt;
-
-void main() {
-    int day;
-    clrscr();
-
-    printf("Enter day number (1-7): ");
-    scanf("%d", &amp;day);
-
-    switch(day) {
-        case 1: printf("Monday\n"); break;
-        case 2: printf("Tuesday\n"); break;
-        case 3: printf("Wednesday\n"); break;
-        case 4: printf("Thursday\n"); break;
-        case 5: printf("Friday\n"); break;
-        case 6: printf("Saturday\n"); break;
-        case 7: printf("Sunday\n"); break;
-        default: printf("Invalid choice! Enter a number between 1 and 7.\n");
-    }
-
-    getch();
-}</code></pre>
-                    </div>
-                </div>
-            </div>
-
-            <div class="qa-item">
-                <button class="qa-question">
-                    <span>Q15. Write a program to display numbers from 1 to 10.</span>
-                    <i class="fa-solid fa-chevron-down"></i>
-                </button>
-                <div class="qa-answer">
-                    <p><strong>Approach:</strong> Configure standard sequential processing blocks utilizing a basic <code>for</code> loop tracker layout.</p>
+                    <p><strong>Approach:</strong> The <code>continue</code> statement skips the remaining code inside the loop for the current iteration and jumps directly to the next iteration. This program uses it to print numbers from 1 to 10 except for 5.</p>
                     <div class="code-container">
 <pre><code>#include &lt;stdio.h&gt;
 #include &lt;conio.h&gt;
@@ -474,8 +92,11 @@ void main() {
     int i;
     clrscr();
 
-    printf("Numbers 1 to 10:\n");
-    for(i = 1; i &lt;= 10; i++) {
+    printf("Printing numbers from 1 to 10 (skipping 5):\n");
+    for (i = 1; i &lt;= 10; i++) {
+        if (i == 5) {
+            continue; /* Skip the rest of the loop block for i = 5 */
+        }
         printf("%d ", i);
     }
     printf("\n");
@@ -488,24 +109,34 @@ void main() {
 
             <div class="qa-item">
                 <button class="qa-question">
-                    <span>Q16. Write a C program to find and display the first 10 odd numbers.</span>
+                    <span>Q3. Write a C program to calculate the addition of all elements in an array.</span>
                     <i class="fa-solid fa-chevron-down"></i>
                 </button>
                 <div class="qa-answer">
-                    <p><strong>Approach:</strong> Loop through index parameters using the linear mathematical offset function <code>(2 * i) - 1</code>.</p>
+                    <p><strong>Approach:</strong> Create a fixed-size array, take input values from the user using a loop, and add each element one by one to a running cumulative <code>sum</code> variable tracker.</p>
                     <div class="code-container">
 <pre><code>#include &lt;stdio.h&gt;
 #include &lt;conio.h&gt;
 
 void main() {
-    int i;
+    int arr[50], size, i, sum = 0;
     clrscr();
 
-    printf("The first 10 odd numbers are:\n");
-    for(i = 1; i &lt;= 10; i++) {
-        printf("%d ", (2 * i - 1));
+    printf("Enter the size of the array: ");
+    scanf("%d", &amp;size);
+
+    printf("Enter %d elements:\n", size);
+    for (i = 0; i &lt; size; i++) {
+        printf("Element %d: ", i + 1);
+        scanf("%d", &amp;arr[i]);
     }
-    printf("\n");
+
+    /* Addition logic */
+    for (i = 0; i &lt; size; i++) {
+        sum = sum + arr[i];
+    }
+
+    printf("\nSum of all elements in the array = %d\n", sum);
 
     getch();
 }</code></pre>
@@ -515,26 +146,37 @@ void main() {
 
             <div class="qa-item">
                 <button class="qa-question">
-                    <span>Q17. Write a program to display the multiplication table of a given number.</span>
+                    <span>Q4. Write a C program to find the smallest element in an array.</span>
                     <i class="fa-solid fa-chevron-down"></i>
                 </button>
                 <div class="qa-answer">
-                    <p><strong>Approach:</strong> Read a baseline multiplication factor, rendering progressive computed products iteratively from 1 through 10.</p>
+                    <p><strong>Approach:</strong> Assume the first element of the array is the smallest. Loop through the remaining elements and update your <code>small</code> tracker variable whenever a lesser value is encountered.</p>
                     <div class="code-container">
 <pre><code>#include &lt;stdio.h&gt;
 #include &lt;conio.h&gt;
 
 void main() {
-    int num, i;
+    int arr[50], size, i, small;
     clrscr();
 
-    printf("Enter a number to print its table: ");
-    scanf("%d", &amp;num);
+    printf("Enter array size: ");
+    scanf("%d", &amp;size);
 
-    printf("Multiplication Table of %d:\n", num);
-    for(i = 1; i &lt;= 10; i++) {
-        printf("%d x %d = %d\n", num, i, num * i);
+    printf("Enter %d elements:\n", size);
+    for (i = 0; i &lt; size; i++) {
+        scanf("%d", &amp;arr[i]);
     }
+
+    /* Start comparison assuming index 0 is smallest */
+    small = arr[0];
+
+    for (i = 1; i &lt; size; i++) {
+        if (arr[i] &lt; small) {
+            small = arr[i];
+        }
+    }
+
+    printf("\nThe smallest element in the array is: %d\n", small);
 
     getch();
 }</code></pre>
@@ -544,97 +186,29 @@ void main() {
 
             <div class="qa-item">
                 <button class="qa-question">
-                    <span>Q18. Write a program to calculate the factorial value of a given number.</span>
+                    <span>Q5. Write a C program to find the largest of three numbers.</span>
                     <i class="fa-solid fa-chevron-down"></i>
                 </button>
                 <div class="qa-answer">
-                    <p><strong>Approach:</strong> Accumulate the product total from 1 to N, storing values inside a <code>long int</code> variable to prevent data overflow limits.</p>
+                    <p><strong>Approach:</strong> Accept three distinct numeric entries from the user and evaluate their boundaries using nested or logical <code>AND</code> condition checks.</p>
                     <div class="code-container">
 <pre><code>#include &lt;stdio.h&gt;
 #include &lt;conio.h&gt;
 
 void main() {
-    int num, i;
-    long int fact = 1;
+    int a, b, c;
     clrscr();
 
-    printf("Enter a number: ");
-    scanf("%d", &amp;num);
+    printf("Enter three distinct numbers: ");
+    scanf("%d %d %d", &amp;a, &amp;b, &amp;c);
 
-    if (num &lt; 0) {
-        printf("Factorial of negative numbers does not exist.\n");
+    if (a &gt;= b &amp;&amp; a &gt;= c) {
+        printf("%d is the largest number.\n", a);
+    } else if (b &gt;= a &amp;&amp; b &gt;= c) {
+        printf("%d is the largest number.\n", b);
     } else {
-        for(i = 1; i &lt;= num; i++) {
-            fact = fact * i;
-        }
-        printf("Factorial of %d = %ld\n", num, fact);
+        printf("%d is the largest number.\n", c);
     }
-
-    getch();
-}</code></pre>
-                    </div>
-                </div>
-            </div>
-
-            <div class="qa-item">
-                <button class="qa-question">
-                    <span>Q19. Write a program to calculate the factors of a given number.</span>
-                    <i class="fa-solid fa-chevron-down"></i>
-                </button>
-                <div class="qa-answer">
-                    <p><strong>Approach:</strong> Evaluate potential factor integer candidates from 1 up to N using a remainder assessment formula check.</p>
-                    <div class="code-container">
-<pre><code>#include &lt;stdio.h&gt;
-#include &lt;conio.h&gt;
-
-void main() {
-    int num, i;
-    clrscr();
-
-    printf("Enter a positive number: ");
-    scanf("%d", &amp;num);
-
-    printf("Factors of %d are: ", num);
-    for(i = 1; i &lt;= num; i++) {
-        if(num % i == 0) {
-            printf("%d ", i);
-        }
-    }
-    printf("\n");
-
-    getch();
-}</code></pre>
-                    </div>
-                </div>
-            </div>
-
-            <div class="qa-item">
-                <button class="qa-question">
-                    <span>Q20. Write a program to generate the Fibonacci series up to N terms.</span>
-                    <i class="fa-solid fa-chevron-down"></i>
-                </button>
-                <div class="qa-answer">
-                    <p><strong>Approach:</strong> Track sequential additions by swapping indices across historical iteration pairs inside tracking registers.</p>
-                    <div class="code-container">
-<pre><code>#include &lt;stdio.h&gt;
-#include &lt;conio.h&gt;
-
-void main() {
-    int terms, i, t1 = 0, t2 = 1, nextTerm;
-    clrscr();
-
-    printf("Enter the number of terms: ");
-    scanf("%d", &amp;terms);
-
-    printf("Fibonacci Series: ");
-
-    for (i = 1; i &lt;= terms; i++) {
-        printf("%d ", t1);
-        nextTerm = t1 + t2;
-        t1 = t2;
-        t2 = nextTerm;
-    }
-    printf("\n");
 
     getch();
 }</code></pre>
